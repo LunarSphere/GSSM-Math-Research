@@ -1,0 +1,45 @@
+-- level 1
+induction n with k hk,
+rw add_zero,
+refl,
+rw add_succ,
+rw hk,
+refl,
+-- level 2
+induction n with k hk,
+rw add_zero,
+refl,
+rw add_succ,
+rw hk,
+refl,
+-- level 3
+induction b with k hk,
+rw add_zero,
+refl,
+rw add_succ(succ a),
+rw hk,
+refl,
+
+-- level 4
+induction b with k hk,
+rw zero_add,
+refl,
+rw add_succ,
+rw succ_add,
+rw hk,
+simp,
+
+-- level 5
+rw one_eq_succ_zero,
+induction n with k hk,
+rw zero_add,
+refl,
+rw add_succ,
+refl,
+-- level 6
+rw add_comm,
+rw add_assoc (a) (c),
+rw add_comm,
+rw add_assoc,
+rw add_comm (b) (c),
+refl,
